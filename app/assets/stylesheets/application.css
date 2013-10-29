@@ -12,4 +12,23 @@
  *= require semantic
  *= require_tree .
  */
+html,
+body {
+  font-size: 15px;
+}
 
+body#example {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  color: #555555;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}

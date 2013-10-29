@@ -1,3 +1,5 @@
+<h1 class='ui heading dividing'> Image Resizer </h1>
+<p> This is a demo of the image resizer API </p>
 <%= form_tag('resize', method: :post, remote: true, multipart: true, id: "myForm") do -%>
  <div class='ui fluid form segment'>
    <div class='field'>
@@ -11,14 +13,3 @@
    <input class='ui blue submit button' type='submit' />
  </div>
 <% end -%>
-<script>
-$(document).ready(function(){
-  $('#myForm')
-    .bind("ajax:success", function(xhr, data, status) {
-      debugger
-    })
-    .bind("ajax:error", function(xhr, status, error) {
-    });
-})
-</script>
-
