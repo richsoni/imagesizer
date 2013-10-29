@@ -1,17 +1,15 @@
-<%= form_tag('check', method: :get, remote: true, id: "myForm") do -%>
+<%= form_tag('resize', method: :post, remote: true, multipart: true, id: "myForm") do -%>
  <div class='ui fluid form segment'>
    <div class='field'>
-     <label>Text To Run Through Checker </label>
-     <textarea name='text'> </textarea>
+     <label> Image </label>
+     <%= file_field_tag 'image', class: 'ui green button' %>
+   </div>
+   <div class='field'>
+     <label> ColumnsXRows (PX) </label>
+     <div class='ui input'> <input type='text' name='size' /> </div>
    </div>
    <input class='ui blue submit button' type='submit' />
  </div>
-  <div id='spellingErrors' style='display:none' class="ui error form segment">
-    <div class="ui error message">
-      <div class="header">Incorrect Words</div>
-      <p></p>
-    </div>
-  </div>
 <% end -%>
 <script>
 $(document).ready(function(){
