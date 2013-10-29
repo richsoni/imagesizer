@@ -1,0 +1,26 @@
+<%= form_tag('check', method: :get, remote: true, id: "myForm") do -%>
+ <div class='ui fluid form segment'>
+   <div class='field'>
+     <label>Text To Run Through Checker </label>
+     <textarea name='text'> </textarea>
+   </div>
+   <input class='ui blue submit button' type='submit' />
+ </div>
+  <div id='spellingErrors' style='display:none' class="ui error form segment">
+    <div class="ui error message">
+      <div class="header">Incorrect Words</div>
+      <p></p>
+    </div>
+  </div>
+<% end -%>
+<script>
+$(document).ready(function(){
+  $('#myForm')
+    .bind("ajax:success", function(xhr, data, status) {
+      debugger
+    })
+    .bind("ajax:error", function(xhr, status, error) {
+    });
+})
+</script>
+
