@@ -5,7 +5,7 @@ server "162.243.8.23", :web, :app, :db, primary: true
 
 set :application, "imagesizer"
 set :user, "rich"
-set :port, 22
+set :port, 5000
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
